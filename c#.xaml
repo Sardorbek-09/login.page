@@ -1,0 +1,28 @@
+using System.Windows;
+using System.Windows.Media;
+
+namespace LightSwitchApp
+{
+    public partial class MainWindow : Window
+    {
+        private bool isLightOn = false; // Lampochkaning holati
+
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void PullString(object sender, RoutedEventArgs e)
+        {
+            if (isLightOn)
+            {
+                Lamp.Fill = new SolidColorBrush(Colors.Gray); // O'chirilgan holat
+            }
+            else
+            {
+                Lamp.Fill = new SolidColorBrush(Colors.Yellow); // Yongan holat
+            }
+            isLightOn = !isLightOn; // Holatni o‘zgartiramiz
+        }
+    }
+}

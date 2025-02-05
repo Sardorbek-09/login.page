@@ -11,3 +11,4 @@
         <Button Content="IPni tortish" Width="120" Height="30" Click="PullString" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>
+
