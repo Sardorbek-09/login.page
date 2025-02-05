@@ -1,0 +1,13 @@
+<Window x:Class="LightSwitchApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Lampochka" Height="350" Width="300">
+    <Grid>
+        <!-- Lampochka -->
+        <Ellipse x:Name="Lamp" Width="100" Height="100" Fill="Gray" VerticalAlignment="Top" Margin="100,20,100,0"/>
+        
+        <!-- IP (Tortiladigan ip) -->
+        <Line x:Name="LampString" X1="150" Y1="120" X2="150" Y2="220" Stroke="Black" StrokeThickness="4"/>
+        <Button Content="IPni tortish" Width="120" Height="30" Click="PullString" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
