@@ -25,4 +25,3 @@ namespace LightSwitchApp
             isLightOn = !isLightOn; // Holatni o‘zgartiramiz
         }
     }
-}
