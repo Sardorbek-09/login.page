@@ -4,95 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foydali Sayt</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #e0f7fa;
-            padding: 20px;
-        }
-        
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin: auto;
-        }
-        
-        button {
-            background: #28a745;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        
-        button:hover {
-            background: #218838;
-        }
-        
-        input,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        
-        .login-section {
-            margin-bottom: 20px;
-        }
-        
-        .book-container {
-            margin-top: 20px;
-        }
-        
-        .book {
-            display: inline-block;
-            margin: 10px;
-            text-align: center;
-        }
-        
-        .book img {
-            width: 150px;
-            height: 200px;
-            border-radius: 5px;
-        }
-    </style>
+    <title>Sayt Nomini Kiriting</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Foydali Sayt</h1>
 
-        <div class="login-section">
-            <h2>Kirish</h2>
-            <input type="text" placeholder="Login">
-            <input type="password" placeholder="Parol">
-            <button onclick="alert('Kirish muvaffaqiyatli!')">Kirish</button>
-            <p>Yoki:</p>
-            <button onclick="alert('Google orqali kirish')">Google orqali</button>
-            <button onclick="alert('iCloud orqali kirish')">iCloud orqali</button>
-        </div>
+    <!-- Menyu -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Bosh Sahifa</a></li>
+            <li><a href="#search">Qidiruv</a></li>
+            <li><a href="#services">Xizmatlar</a>
+                <ul class="dropdown">
+                    <li><a href="#game">Game</a></li>
+                    <li><a href="#app">App</a></li>
+                    <li><a href="#book">Book</a></li>
+                    <li><a href="#music">Music</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
-        <div class="book-container">
-            <h2>Kitoblar</h2>
-            <div class="book" onclick="alert('PDF ochilmoqda')">
-                <img src="https://via.placeholder.com/150" alt="Kitob muqovasi">
-                <p>Kitob 1</p>
-            </div>
-            <div class="book" onclick="alert('PDF ochilmoqda')">
-                <img src="https://via.placeholder.com/150" alt="Kitob muqovasi">
-                <p>Kitob 2</p>
-            </div>
+    <!-- Video -->
+    <section id="home" class="video-section">
+        <h1>Saytni tanishtirish</h1>
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
+        </video>
+    </section>
+
+    <!-- Xizmatlar bo'limi -->
+    <section id="services" class="services-section">
+        <h2>Xizmatlar</h2>
+        <p>Bizning xizmatlarimiz haqida ma'lumotlar.</p>
+    </section>
+
+    <!-- Game, App, Book, Music bo'limlari -->
+    <section id="game" class="service-detail">
+        <h3>Game</h3>
+        <div id="game-search">
+            <input type="text" id="game-search-input" placeholder="O'yin qidirish...">
+            <button onclick="searchGames()">Qidirish</button>
         </div>
-    </div>
+        <div id="game-results"></div>
+    </section>
+
+    <section id="app" class="service-detail">
+        <h3>App</h3>
+        <div id="app-results">
+            <p>Kompyuterda ishlaydigan dasturlar ro'yxati.</p>
+        </div>
+    </section>
+
+    <section id="book" class="service-detail">
+        <h3>Book</h3>
+        <div id="book-search">
+            <input type="text" id="book-search-input" placeholder="Kitobni qidirish...">
+            <button onclick="searchBooks()">Qidirish</button>
+        </div>
+        <div id="book-results"></div>
+    </section>
+
+    <section id="music" class="service-detail">
+        <h3>Music</h3>
+        <div id="music-results">
+            <p>Spotify kabi musiqa ro'yxati.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
