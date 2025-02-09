@@ -8,7 +8,6 @@
     <style>
         body {
             background-image: url('background.jpg');
-            /* Fonda chiroyli tasvir */
             background-size: cover;
             background-position: center;
             color: white;
@@ -24,39 +23,6 @@
             font-size: 3em;
         }
         
-        .login-form {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-            margin: 0 auto;
-        }
-        
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        
-        button {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #4CAF50;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        
-        button:hover {
-            background-color: #45a049;
-        }
-        
         .language-selector {
             margin-top: 20px;
         }
@@ -66,16 +32,6 @@
 <body>
     <div class="container">
         <h1>Welcome to Best Brain</h1>
-
-        <!-- Login Form -->
-        <div class="login-form">
-            <h2>Login</h2>
-            <form id="loginForm">
-                <input type="text" id="username" placeholder="Username" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <button type="submit">Login</button>
-            </form>
-        </div>
 
         <!-- Language Selector -->
         <div class="language-selector">
@@ -104,20 +60,6 @@
                 responseMessage.textContent = "Добро пожаловать в Best Brain!";
             }
         }
-
-        // Login formasi uchun o'zgarish (bu faqat frontend kodidir)
-        document.getElementById("loginForm").onsubmit = function(event) {
-            event.preventDefault();
-
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-
-            if (username === "admin" && password === "1234") {
-                alert("Login successful!");
-            } else {
-                alert("Invalid username or password.");
-            }
-        };
     </script>
 </body>
 
