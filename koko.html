@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayt Nomini Kiriting</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Login va Ro'yxatdan o'tish bo'limi -->
+    <div id="login-container" class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Sardorbekvalijonov00@gmail.com">
+            <label for="password">Parol:</label>
+            <input type="password" id="password" name="password" required placeholder="Parol kiriting">
+            <button type="submit">Kirish</button>
+        </form>
+    </div>
+
+    <!-- Saytning Asosiy Kontenti -->
+    <div id="main-content" class="main-content hidden">
+        <div id="welcome" class="welcome">
+            <h1 class="hello-text">Hello, Sardorbek!</h1>
+        </div>
+        <section id="home" class="home">
+            <h2>Bosh Sahifa</h2>
+            <p>Saytingizga xush kelibsiz!</p>
+        </section>
+    </div>
+</body>
+
+</html>
